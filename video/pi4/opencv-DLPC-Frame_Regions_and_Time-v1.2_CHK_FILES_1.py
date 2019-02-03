@@ -1,6 +1,7 @@
+#TEST SCRIPT TO CHECK FRAME EXTRACTION, ESPECIALLY TIME VALIDITY
 #v1.1: changed time_region = np.array([745,604]) to time_region = np.array([747,604]) as some extra pixels where 
 #      showing up on the left causing the OCR to give incorrect results
-#v1.2: time region to extract: time_region_size_h = 24, time_region = np.array([747,600])
+#v1.2: time region to extract: time_region_size_h = 24, time_region = np.array([745,600]) or np.array([747,600]) depending on camera
 #      added loop for OCR of time
 #      added default time if still unrecognized
 #      added os create directories
@@ -19,6 +20,7 @@ videos = [
 'vokoscreen-2019-01-06_06-00-01.mp4'
 ]
 
+#set paths
 video_frames = '/media/2TB/datasets/traffic/video_frames/pi4/fullframe/test/'
 video_regions = '/media/2TB/datasets/traffic/video_frames/pi4/regions/test/'
 video_path = '/media/2TB/datasets/traffic/video_frames/pi4/video/'
@@ -38,7 +40,7 @@ number_of_regions = regions[0:,:1].size
 #time region to extract
 time_region_size_h = 24
 time_region_size_w = 55
-time_region = np.array([745,600])
+time_region = np.array([745,600])#may be changed to 747,600 for certain cameras
 
 #Write full frame image to file, and individual frame regions; in each case add the time to the file name
 while video_no < len(videos):
