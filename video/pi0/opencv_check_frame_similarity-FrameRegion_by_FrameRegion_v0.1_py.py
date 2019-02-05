@@ -20,7 +20,7 @@ video_regions = 'regions/'
 video_region_duplicates = 'regions/duplicates/'
 
 camera = 'pi0/'
-video_date = '2018-12-26_06-00'
+video_date = '2019-01-01_15-30'
 
 regions_path = video_frames_path + camera + video_regions + video_date + "/"
 regions_duplicates_path = video_frames_path + camera + video_region_duplicates + video_date + "/"
