@@ -20,7 +20,7 @@ video_regions = 'regions/'
 video_region_duplicates = 'regions/duplicates/'
 
 camera = 'pi4/'
-video_date = '2018-12-26_06-00'
+video_date = '2018-12-25_15-30'
 
 regions_path = video_frames_path + camera + video_regions + video_date + "/"
 regions_duplicates_path = video_frames_path + camera + video_region_duplicates + video_date + "/"
@@ -110,21 +110,21 @@ def compare_images(imageA, imageB, title):
 	s = measure.compare_ssim(imageA, imageB)
  
 	# setup the figure
-	fig = plt.figure(title)
-	plt.suptitle("MSE: %.2f, SSIM: %.2f" % (m, s))
+	# fig = plt.figure(title)
+	# plt.suptitle("MSE: %.2f, SSIM: %.2f" % (m, s))
  
 	# show first image
-	ax = fig.add_subplot(1, 2, 1)
-	plt.imshow(imageA, cmap = plt.cm.gray)
-	plt.axis("off")
+	# ax = fig.add_subplot(1, 2, 1)
+	# plt.imshow(imageA, cmap = plt.cm.gray)
+	# plt.axis("off")
  
 	# show the second image
-	ax = fig.add_subplot(1, 2, 2)
-	plt.imshow(imageB, cmap = plt.cm.gray)
-	plt.axis("off")
+	# ax = fig.add_subplot(1, 2, 2)
+	# plt.imshow(imageB, cmap = plt.cm.gray)
+	# plt.axis("off")
  
 	# show the images
-	plt.show()
+	# plt.show()
 	return s
 
 for x in range(len(file_content_sorted)):
